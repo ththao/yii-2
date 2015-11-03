@@ -54,31 +54,6 @@ web                     contains the entry script and Web resources
 environments/			contains environment-based overrides
 ```
 
-INSTALLATION USING VAGRANT
---------------------------
-
-Vagrant is a virtual machine management program. It works in conjunction with a VM program
-(most commonly VirtualBox but also VMWare and others) to make hosting
-a VM easier.
-
-1. Clone the application.
-2. Download and Install [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-3. After installing vagrant, type `vagrant plugin install vagrant-hostsupdater` and `vagrant up` on the project root folder
-4. The very first time you run this Vagrant box, it will need to download an ubuntu image which may take 10 minutes or so. This only happens once even if you destroy the vagrant box later.
-5. The boot process will prompt for your OS password to make changes to /etc/hosts
-6. Once the VM is up, you can use the following URLs:
-
-   - frontend.local (frontend url)
-   - backend.local (backend url)
-   - api.local (api url)
-
-The VM works by keeping your whole repo folder in sync with the guest Linux box. This means you work like you always do, use your IDE
-to write code in your native operating system, and any changes are kept in sync with the server VM. There is no manual uploading or
-transferring and you shouldn't need to do anything directly with the VM. Just make your code changes, save, and then use your browser
-to see the results. There's nothing else.
-
-If you need to connect to the machine for any reason, you can use the command: `vagrant ssh`
-This will ssh you into the virtual box, so you're on the Linux machine.
 
 MANUAL INSTALLATION
 -------------------
@@ -91,31 +66,10 @@ MANUAL INSTALLATION
 5. type `sudo ./init --env=Localhost --overwrite=All`
 6. type `sudo ./yii migrate --interactive=0`
 
-ADJUSTING PROJECT CONFIGURATION
--------------------------------
 
-1 Adjusting the application endpoint
-
-  - By default the frontend, backend and api is pointing to frontend.local, backend.local and api.local.
-    To adjust them you need to modify the `puphpet/config.yaml` and type `vagrant reload` or `vagrant provision` to reload the puphpet configuration
-
-    also adjust the `Vagrantfile` `config.hostsupdater.aliases` according to your application
-
-2. The vagrant has already built-in LAMP stack. in order to access the database, access it via your preferred MySQL GUI Tools or access it via browser http://192.168.57.101/adminer
-
-3. The default login for administrator credentials is `admin/nimda123`, you may want to adjust the credentials in
-`console/migrations/m130524_201442_init.php`
 
 WORKING WITH GRUNT
 ------------------
-
-If you do `vagrant` as a project setup, just simply do this following
-
-1. type `vagrant ssh` to access the VM machine
-2. go to the project folder by typing `cd /var/www/html`
-3. type `grunt watch` to watch the LESS and JS
-
-If you do `manual installation` as a project setup, do the following
 
 1. Install [NodeJS](http://nodejs.org/)
 2. After installing NodeJS, type `npm install -g grunt-cli` and `npm install grunt --save-dev` and `npm install` on the project root folder
