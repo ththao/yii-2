@@ -11,7 +11,7 @@ class BaseController extends Controller
     public function beforeAction($action)
     {
 
-        Yii::$app->view->title = Yii::t('app', 'Verify SMS Code - Backend'); // Default
+        Yii::$app->view->title = Yii::t('app', 'Yii2Template - Backend'); // Default
 
         if (Yii::$app->user->isGuest) {
         	$this->goHome();

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 /* @var $this yii\web\View */
-$this->title = "Verify SMS Code";
+$this->title = "Yii2Template";
 ?>
 
 <div class="col-md-3 left-container">

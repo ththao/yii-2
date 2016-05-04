@@ -1,7 +1,4 @@
 <?php
-/**
- * @author Bryan Tan <bryantan16@gmail.com>
- */
 
 namespace common\listeners;
 

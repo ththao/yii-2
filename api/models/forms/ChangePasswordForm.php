@@ -1,8 +1,4 @@
 <?php
-/**
- * @author Bryan Tan <bryantan16@gmail.com>
- */
-
 namespace api\models\forms;
 
 use api\models\User;

@@ -49,11 +49,11 @@ class ContactForm extends Model
     public function getEmailByType()
     {
         if ($this->type == self::TYPE_SUPPORT) {
-            return $type = 'support@verifysmscode.com';
+            return $type = 'support@yii2template.com';
         } elseif ($this->type == self::TYPE_PARTNERSHIP_INQUIRY) {
-            return $type = 'admin@verifysmscode.com';
+            return $type = 'admin@yii2template.com';
         } else {
-            return $type = 'admin@verifysmscode.com';
+            return $type = 'admin@yii2template.com';
         }
     }
     public function getType() {

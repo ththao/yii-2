@@ -1,16 +1,12 @@
 <?php
-/**
- * @author Bryan Tan <bryantan16@gmail.com>
- */
 
 namespace common\traits;
 
-use Yii;
-use yii\helpers\FileHelper;
-use common\models\User;
 use common\models\Challenge;
-use common\models\Photo;
 use common\models\Group;
+use common\models\Photo;
+use common\models\User;
+use Yii;
 
 trait FileTrait
 {

@@ -1,6 +1,6 @@
 <?php
 return [
-	'name' => 'Ceres Yii2 Template',
+	'name' => 'Ceres Yii2Template',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'timeZone' => 'UTC',
     'components' => [
